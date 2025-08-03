@@ -12,6 +12,7 @@ namespace librarymanagementArchitectureRepository.Models
 
         public string MemberId { get; set; } // Unique identifier for the member who borrowed the book
         public string BookId { get; set; } // Unique identifier for the book that was borrowed
+        public DateTime BorrowDate { get; set; } // Date when the book was borrowed
 
     }
 }
