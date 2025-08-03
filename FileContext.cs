@@ -56,6 +56,7 @@ namespace librarymanagementArchitectureRepository
                 var parts = line.Split('|');  // Split the line into parts using '|' as a delimiter
                 members.Add(new Member { Id = parts[0], Name = parts[1] }); // Create a new Member object and add it to the list
             }
+            return members; // Return the list of members loaded from the file
 
         }
 
