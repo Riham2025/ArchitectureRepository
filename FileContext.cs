@@ -51,7 +51,7 @@ namespace librarymanagementArchitectureRepository
             
             if (!File.Exists(MemberFile)) return members;// Return empty list if the file does not exist
 
-            foreach (var line in File.ReadAllLines(MemberFile)) 
+            foreach (var line in File.ReadAllLines(MemberFile)) // Read each line from the member file
             {
                 var parts = line.Split('|'); 
                 members.Add(new Member { Id = parts[0], Name = parts[1] }); 
