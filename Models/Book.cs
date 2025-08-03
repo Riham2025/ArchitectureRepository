@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace librarymanagementArchitectureRepository.Models
+namespace librarymanagementArchitectureRepository.Models // namespace for the Book model
 {
     public class Book // Book model representing a book in the library
     {
