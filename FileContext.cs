@@ -91,10 +91,15 @@ namespace librarymanagementArchitectureRepository
             return records;
         }
 
+        public void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the file
+        {
+            
+        }
+
     } 
 
 
 
 
-    }
+    
 }
