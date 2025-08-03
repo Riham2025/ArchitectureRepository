@@ -47,7 +47,16 @@ namespace librarymanagementArchitectureRepository
         }
         public List<Member> LoadMembers() // Method to load members from the file
         {
-           
+            var members = new List<Member>(); 
+            
+            if (!File.Exists(MemberFile)) return members;// Return empty list if the file does not exist
+
+            foreach (var line in File.ReadAllLines(MemberFile)) 
+            {
+                var parts = line.Split('|'); 
+                members.Add(new Member { Id = parts[0], Name = parts[1] }); 
+            }
+
         }
 
 
