@@ -85,7 +85,7 @@ namespace librarymanagementArchitectureRepository
                     MemberId = parts[1], // Unique identifier for the member who borrowed the book
                     BookId = parts[2], // Unique identifier for the book that was borrowed
                     BorrowDate = DateTime.Parse(parts[3]), // Date when the book was borrowed
-                    ReturnDate = string.IsNullOrEmpty(parts[4]) ? null : DateTime.Parse(parts[4])
+                    ReturnDate = string.IsNullOrEmpty(parts[4]) ? null : DateTime.Parse(parts[4]) // Date when the book was returned, nullable if not yet returned
                 });
             }
             return records;
