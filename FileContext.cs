@@ -54,7 +54,7 @@ namespace librarymanagementArchitectureRepository
             foreach (var line in File.ReadAllLines(MemberFile)) // Read each line from the member file
             {
                 var parts = line.Split('|');  // Split the line into parts using '|' as a delimiter
-                members.Add(new Member { Id = parts[0], Name = parts[1] }); 
+                members.Add(new Member { Id = parts[0], Name = parts[1] }); // Create a new Member object and add it to the list
             }
 
         }
