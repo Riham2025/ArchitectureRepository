@@ -83,7 +83,7 @@ namespace librarymanagementArchitectureRepository
                 {
                     Id = parts[0], // Unique identifier for the borrow record
                     MemberId = parts[1], // Unique identifier for the member who borrowed the book
-                    BookId = parts[2],
+                    BookId = parts[2], // Unique identifier for the book that was borrowed
                     BorrowDate = DateTime.Parse(parts[3]),
                     ReturnDate = string.IsNullOrEmpty(parts[4]) ? null : DateTime.Parse(parts[4])
                 });
