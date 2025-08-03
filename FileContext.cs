@@ -73,7 +73,7 @@ namespace librarymanagementArchitectureRepository
        
         {
             var records = new List<BorrowRecord>(); // Initialize a list to hold borrow records
-            if (!File.Exists(BorrowFile)) return records;
+            if (!File.Exists(BorrowFile)) return records; // Return empty list if the file does not exist
 
         }
 
