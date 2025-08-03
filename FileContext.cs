@@ -95,16 +95,15 @@ namespace librarymanagementArchitectureRepository
         {
             var lines = new List<string>(); // Initialize a list to hold lines for the file
             foreach (var r in records)
-                lines.Add($"{r.Id}|{r.MemberId}|{r.BookId}|{r.BorrowDate}|{(r.ReturnDate.HasValue ? r.ReturnDate.Value.ToString() : "")}");
+                lines.Add($"{r.Id}|{r.MemberId}|{r.BookId}|{r.BorrowDate}|{(r.ReturnDate.HasValue ? r.ReturnDate.Value.ToString() : "")}"); // Create a line for each borrow record with its properties separated by '|'
             File.WriteAllLines(BorrowFile, lines); // Write all lines to the borrow records file
         }
 
     }
 
-    } 
+}  
 
 
 
 
     
-}
