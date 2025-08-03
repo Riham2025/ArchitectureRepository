@@ -22,7 +22,8 @@ namespace librarymanagementArchitectureRepository
 
             foreach (var line in File.ReadAllLines(BookFile)) // Read each line from the book file
             {
-                
+                var parts = line.Split('|'); // Split the line into parts using '|' as a delimiter
+
             }
             {
 
