@@ -35,10 +35,17 @@ namespace librarymanagementArchitectureRepository
             return books; // Return the list of books loaded from the file
         }
 
+        public void SaveBooks(List<Book> books) // Method to save books to the file
+        {
+            
+        }
+   
+        
+
 
     }
             
 
 
                 
-    }   
+ }    
