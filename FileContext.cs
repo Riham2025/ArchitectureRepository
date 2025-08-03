@@ -26,11 +26,12 @@ namespace librarymanagementArchitectureRepository
                 books.Add(new Book // Create a new Book object and add it to the list
                 {
                     Id = parts[0], // Unique identifier for the book
+                    Title = parts[1], // Title of the book
 
 
                 }
             {
 
-            }
+
+                
     }   }
-}
