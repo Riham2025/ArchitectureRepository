@@ -42,7 +42,7 @@ namespace librarymanagementArchitectureRepository
             foreach (var book in books) // Iterate through each book in the list
             {
                 lines.Add($"{book.Id}|{book.Title}|{book.Author}|{book.IsAvailable}"); // Create a line for each book with its properties separated by '|'
-                File.WriteAllLines(BookFile, lines);
+                File.WriteAllLines(BookFile, lines); // Write all lines to the book file
             }
 
         }
