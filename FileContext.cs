@@ -23,6 +23,8 @@ namespace librarymanagementArchitectureRepository
             foreach (var line in File.ReadAllLines(BookFile)) // Read each line from the book file
             {
                 var parts = line.Split('|'); // Split the line into parts using '|' as a delimiter
+                books.Add(new Book // Create a new Book object and add it to the list
+               
 
             }
             {
