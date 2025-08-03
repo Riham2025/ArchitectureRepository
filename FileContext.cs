@@ -17,7 +17,8 @@ namespace librarymanagementArchitectureRepository
 
         public List<Book> LoadBooks() // Method to load books from the file
         {
-            
+            var books = new List<Book>(); // Initialize a list to hold books
+
         }
     }
 }
