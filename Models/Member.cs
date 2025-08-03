@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Models
 {
-    class Member
+    public class Member // Member model representing a library member
     {
+       
     }
 }
