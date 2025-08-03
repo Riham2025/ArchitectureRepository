@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace librarymanagementArchitectureRepository
+namespace librarymanagementArchitectureRepository // Namespace for the library management system file context
 {
     public class FileContext // FileContext class for managing file operations in the library management system
     {
