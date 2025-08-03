@@ -20,6 +20,12 @@ namespace librarymanagementArchitectureRepository
             var books = new List<Book>(); // Initialize a list to hold books
             if (!File.Exists(BookFile)) return books; // Return empty list if the file does not exist
 
-        }
-    }
+            foreach (var line in File.ReadAllLines(BookFile)) // Read each line from the book file
+            {
+                
+            }
+            {
+
+            }
+    }   }
 }
