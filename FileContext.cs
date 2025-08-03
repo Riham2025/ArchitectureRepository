@@ -9,5 +9,8 @@ namespace librarymanagementArchitectureRepository
     public class FileContext // FileContext class for managing file operations in the library management system
     {
         public string BookFile = "books.txt"; // File path for storing book data
+
+        public string MemberFile = "members.txt"; // File path for storing member data
+
     }
 }
