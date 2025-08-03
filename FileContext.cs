@@ -93,7 +93,8 @@ namespace librarymanagementArchitectureRepository
 
         public void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the file
         {
-            
+            var lines = new List<string>(); // Initialize a list to hold lines for the file
+
         }
 
     } 
