@@ -79,9 +79,19 @@ namespace librarymanagementArchitectureRepository
             {
                 var parts = line.Split('|'); // Split the line into parts using '|' as a delimiter
                 records.Add(new BorrowRecord // Create a new BorrowRecord object and add it to the list
-              
 
-        } 
+                {
+                    Id = parts[0], // Unique identifier for the borrow record
+                    MemberId = parts[1],
+                    BookId = parts[2],
+                    BorrowDate = DateTime.Parse(parts[3]),
+                    ReturnDate = string.IsNullOrEmpty(parts[4]) ? null : DateTime.Parse(parts[4])
+                });
+            }
+            return records;
+        }
+
+    } 
 
 
 
