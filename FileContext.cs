@@ -1,4 +1,5 @@
-﻿using System;
+﻿using librarymanagementArchitectureRepository.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,9 @@ namespace librarymanagementArchitectureRepository
 
         public string BorrowFile = "borrows.txt"; // File path for storing borrow records data
 
+        public List<Book> LoadBooks() // Method to load books from the file
+        {
+            
+        }
     }
 }
