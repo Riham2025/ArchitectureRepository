@@ -67,11 +67,12 @@ namespace librarymanagementArchitectureRepository
                 lines.Add($"{m.Id}|{m.Name}"); // Create a line for each member with its properties separated by '|'
             File.WriteAllLines(MemberFile, lines); // Write all lines to the member file
 
+        }
 
-
-
-
-
+        public List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the file
+       
+        { 
+        
         }
 
 
