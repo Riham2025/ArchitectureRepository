@@ -78,10 +78,8 @@ namespace librarymanagementArchitectureRepository
             foreach (var line in File.ReadAllLines(BorrowFile)) 
             {
                 var parts = line.Split('|'); // Split the line into parts using '|' as a delimiter
-                records.Add(new BorrowRecord
-                {
-
-                }
+                records.Add(new BorrowRecord // Create a new BorrowRecord object and add it to the list
+              
 
         } 
 
