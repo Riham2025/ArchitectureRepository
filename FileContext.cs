@@ -30,10 +30,15 @@ namespace librarymanagementArchitectureRepository
                     Author = parts[2], // Author of the book
                     IsAvailable = bool.Parse(parts[3]) // Availability status of the book
 
+                });
+            }
+            return books; // Return the list of books loaded from the file
+        }
 
-                }
-            {
+
+    }
+            
 
 
                 
-    }   }
+    }   
