@@ -64,7 +64,7 @@ namespace librarymanagementArchitectureRepository
         {
             var lines = new List<string>(); // Initialize a list to hold lines for the file
             foreach (var m in members)
-                lines.Add($"{m.Id}|{m.Name}");
+                lines.Add($"{m.Id}|{m.Name}"); // Create a line for each member with its properties separated by '|'
             File.WriteAllLines(MemberFile, lines);
 
 
