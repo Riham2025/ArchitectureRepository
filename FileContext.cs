@@ -12,5 +12,7 @@ namespace librarymanagementArchitectureRepository
 
         public string MemberFile = "members.txt"; // File path for storing member data
 
+        public string BorrowFile = "borrows.txt"; // File path for storing borrow records data
+
     }
 }
