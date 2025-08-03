@@ -24,9 +24,11 @@ namespace librarymanagementArchitectureRepository
             {
                 var parts = line.Split('|'); // Split the line into parts using '|' as a delimiter
                 books.Add(new Book // Create a new Book object and add it to the list
-               
+                {
+                    Id = parts[0], // Unique identifier for the book
 
-            }
+
+                }
             {
 
             }
