@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository
 {
-    class FileContext
+    public class FileContext // FileContext class for managing file operations in the library management system
     {
     }
 }
