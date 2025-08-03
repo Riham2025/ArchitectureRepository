@@ -40,15 +40,15 @@ namespace librarymanagementArchitectureRepository
 
             var lines = new List<string>(); // Initialize a list to hold lines for the file
             foreach (var book in books) // Iterate through each book in the list
-            
+
                 lines.Add($"{book.Id}|{book.Title}|{book.Author}|{book.IsAvailable}"); // Create a line for each book with its properties separated by '|'
-                File.WriteAllLines(BookFile, lines); // Write all lines to the book file
+            File.WriteAllLines(BookFile, lines); // Write all lines to the book file
 
         }
         public List<Member> LoadMembers() // Method to load members from the file
         {
-            var members = new List<Member>(); 
-            
+            var members = new List<Member>();
+
             if (!File.Exists(MemberFile)) return members;// Return empty list if the file does not exist
 
             foreach (var line in File.ReadAllLines(MemberFile)) // Read each line from the member file
@@ -62,15 +62,20 @@ namespace librarymanagementArchitectureRepository
 
         public void SaveMembers(List<Member> members) // Method to save members to the file
         {
-           
-        { 
+            var lines = new List<string>(); // Initialize a list to hold lines for the file
+            foreach (var m in members)
+                lines.Add($"{m.Id}|{m.Name}");
+            File.WriteAllLines(MemberFile, lines);
+
+
+
+
+
+
+        }
 
 
 
 
     }
-            
-
-
-                
- }    
+}
