@@ -71,8 +71,10 @@ namespace librarymanagementArchitectureRepository
 
         public List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the file
        
-        { 
-        
+        {
+            var records = new List<BorrowRecord>(); // Initialize a list to hold borrow records
+            if (!File.Exists(BorrowFile)) return records;
+
         }
 
 
