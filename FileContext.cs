@@ -60,6 +60,11 @@ namespace librarymanagementArchitectureRepository
 
         }
 
+        public void SaveMembers(List<Member> members) // Method to save members to the file
+        {
+           
+        { 
+
 
 
 
