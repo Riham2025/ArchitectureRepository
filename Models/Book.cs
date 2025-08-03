@@ -9,5 +9,6 @@ namespace librarymanagementArchitectureRepository.Models
     public class Book
     {
         public string Id { get; set; } // Unique identifier for the book
+        public string Title { get; set; } // Title of the book
     }
 }
