@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Models
 {
-    public class BorrowRecord // BorrowRecord model representing a record of a book borrowed by a member
+    public class BorrowRecord //BorrowRecord model representing a record of a book borrowed by a member
     {
         
     }
