@@ -94,8 +94,12 @@ namespace librarymanagementArchitectureRepository
         public void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the file
         {
             var lines = new List<string>(); // Initialize a list to hold lines for the file
-
+            foreach (var r in records)
+                lines.Add($"{r.Id}|{r.MemberId}|{r.BookId}|{r.BorrowDate}|{(r.ReturnDate.HasValue ? r.ReturnDate.Value.ToString() : "")}");
+            File.WriteAllLines(BorrowFile, lines); // Write all lines to the borrow records file
         }
+
+    }
 
     } 
 
