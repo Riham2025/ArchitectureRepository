@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Models
 {
-    class Book
+    public class Book
     {
+        public string Id { get; set; } // Unique identifier for the book
     }
 }
