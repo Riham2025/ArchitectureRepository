@@ -8,6 +8,7 @@ namespace librarymanagementArchitectureRepository.Models
 {
     public class BorrowRecord //BorrowRecord model representing a record of a book borrowed by a member
     {
+        public string Id { get; set; } // Unique identifier for the borrow record
         
     }
 }
