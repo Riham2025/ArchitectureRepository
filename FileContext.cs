@@ -39,6 +39,10 @@ namespace librarymanagementArchitectureRepository
         {
 
             var lines = new List<string>(); // Initialize a list to hold lines for the file
+            foreach (var book in books) // Iterate through each book in the list
+            {
+                lines.Add($"{book.Id}|{book.Title}|{book.Author}|{book.IsAvailable}"); // Format book properties into a string and add to the list
+            }
 
         }
 
