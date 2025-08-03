@@ -37,10 +37,12 @@ namespace librarymanagementArchitectureRepository
 
         public void SaveBooks(List<Book> books) // Method to save books to the file
         {
-            
+
+            var lines = new List<string>(); // Initialize a list to hold lines for the file
+
         }
-   
-        
+
+
 
 
     }
