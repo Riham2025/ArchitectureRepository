@@ -28,6 +28,7 @@ namespace librarymanagementArchitectureRepository
                     Id = parts[0], // Unique identifier for the book
                     Title = parts[1], // Title of the book
                     Author = parts[2], // Author of the book
+                    IsAvailable = bool.Parse(parts[3]) // Availability status of the book
 
 
                 }
