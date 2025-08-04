@@ -40,6 +40,12 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             string json = File.ReadAllText(MemberFile); // Read the JSON content from the file
             return JsonSerializer.Deserialize<List<Member>>(json) ?? new List<Member>(); // Deserialize the JSON content into a list of Member objects, return an empty list if deserialization fails
         }
+
+        public static void SaveMembers(List<Member> members) // Method to save members to the JSON file
+        {
+            string json = JsonSerializer.Serialize(members, options);
+            File.WriteAllText(MemberFile, json);
+        }
     }
 
 }  
