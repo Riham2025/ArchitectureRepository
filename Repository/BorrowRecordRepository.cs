@@ -30,7 +30,7 @@ namespace librarymanagementArchitectureRepository.Repository
             var index = _records.FindIndex(r => r.Id == record.Id); // Find the index of the record with the same Id as the provided record
             if (index != -1) // Check if the record exists in the list
             {
-                _records[index] = record;
+                _records[index] = record; // Update the record at the found index with the new record data
                 _context.SaveBorrowRecords(_records);
             }
         }
