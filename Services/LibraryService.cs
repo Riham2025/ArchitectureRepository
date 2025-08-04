@@ -57,7 +57,7 @@ namespace librarymanagementArchitectureRepository.Services
             var record = new BorrowRecord // Create a new borrow record
             {
                 Id = Guid.NewGuid().ToString(), // Generate a unique identifier for the record
-                BookId = bookId,
+                BookId = bookId, // Unique identifier for the book being borrowed
                 MemberId = memberId,
                 BorrowDate = DateTime.Now
             };
