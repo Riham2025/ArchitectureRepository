@@ -58,7 +58,7 @@ namespace librarymanagementArchitectureRepository.Services
             {
                 Id = Guid.NewGuid().ToString(), // Generate a unique identifier for the record
                 BookId = bookId, // Unique identifier for the book being borrowed
-                MemberId = memberId,
+                MemberId = memberId, // Unique identifier for the member borrowing the book
                 BorrowDate = DateTime.Now
             };
 
