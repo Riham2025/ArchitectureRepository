@@ -26,7 +26,7 @@ namespace librarymanagementArchitectureRepository.Repository
             FileContext.SaveBooks(_books); // Save the updated list of books to the file context
         }
 
-        public void Update(Book book)
+        public void Update(Book book) // Method to update an existing book in the repository
         {
             var index = _books.FindIndex(b => b.Id == book.Id);
             if (index != -1)
