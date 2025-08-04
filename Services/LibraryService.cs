@@ -82,7 +82,7 @@ namespace librarymanagementArchitectureRepository.Services
 
 
             record.ReturnDate = DateTime.Now; // Set the return date to the current date and time
-            _recordRepo.Update(record);
+            _recordRepo.Update(record); // Update the borrow record in the borrow record repository with the return date
 
             var book = _bookRepo.GetById(bookId);
             if (book != null)
