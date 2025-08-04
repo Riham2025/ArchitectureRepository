@@ -24,7 +24,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static List<Book> LoadBooks() // Method to load books from the JSON file
         {
             if (!File.Exists(BookFile)) return new List<Book>(); // Check if the file exists, return an empty list if not
-            string json = File.ReadAllText(BookFile);
+            string json = File.ReadAllText(BookFile); // Read the JSON content from the file
             return JsonSerializer.Deserialize<List<Book>>(json) ?? new List<Book>();
         }
     }
