@@ -35,5 +35,16 @@ namespace librarymanagementArchitectureRepository.Services
             Console.WriteLine("Member registered."); // Print confirmation message
         }
 
+        public void BorrowBook(string bookId, string memberId) 
+        {
+            var book = _bookRepo.GetById(bookId); // Get the book by its unique identifier
+            if (book == null || !book.IsAvailable)
+            {
+                Console.WriteLine("Book not available.");
+                return;
+            }
+
+
+        }
     }
 }
