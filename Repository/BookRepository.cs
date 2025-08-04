@@ -16,31 +16,23 @@ namespace librarymanagementArchitectureRepository.Repository
             _books = FileContext.LoadBooks(); // Load books from the file context into the repository's memory
         }
 
-        public BookRepository(FileContext context) // Constructor to initialize the repository with a file context
+        public List<Book> GetAll() => _books; // Method to retrieve all books from the repository
+
+        public Book GetById(string id) => _books.FirstOrDefault(b => b.Id == id);
+
+        public void Add(Book book)
         {
-            _context = context; // Assign the provided file context to the repository
-            _books = _context.LoadBooks(); // Load books from the file context into the repository's memory
+            _books.Add(book);
+            FileContext.SaveBooks(_books);
         }
 
-        public List<Book> GetAll() => _books; // Method to get all books from the repository
-
-        public Book GetById(string id) => _books.FirstOrDefault(b => b.Id == id); // Method to get a book by its unique identifier
-
-
-        public void Add(Book book) // Method to add a new book to the repository
-        {
-
-            _books.Add(book); // Add the new book to the in-memory list of books
-            _context.SaveBooks(_books); // Save the updated list of books to the file context
-        }
-
-        public void Update(Book book) // Method to update an existing book in the repository
+        public void Update(Book book)
         {
             var index = _books.FindIndex(b => b.Id == book.Id);
-            if (index != -1) // Check if the book exists in the list
+            if (index != -1)
             {
-                _books[index] = book; // Update the book at the found index with the new book data
-                _context.SaveBooks(_books); // Save the updated list of books to the file context
+                _books[index] = book;
+                FileContext.SaveBooks(_books);
             }
         }
     }
