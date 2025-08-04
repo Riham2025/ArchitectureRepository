@@ -18,5 +18,12 @@ namespace librarymanagementArchitectureRepository.Repository
             _context = context; // Assign the provided file context to the repository
             _records = _context.LoadBorrowRecords(); // Load borrow records from the file context into the repository's memory
         }
+
+        public void Add(BorrowRecord record) // Method to add a new borrow record to the repository
+        {
+            _records.Add(record);
+            _context.SaveBorrowRecords(_records);
+        }
+
     }
 }
