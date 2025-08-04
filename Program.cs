@@ -11,7 +11,7 @@ namespace librarymanagementArchitectureRepository
 
             var bookRepo = new BookRepository(fileContext); // BookRepository instance to manage book data
             var memberRepo = new MemberRepository(fileContext); // MemberRepository instance to manage member data
-            var recordRepo = new BorrowRecordRepository(fileContext);
+            var recordRepo = new BorrowRecordRepository(fileContext);// BorrowRecordRepository instance to manage borrow records
 
             var service = new LibraryService(bookRepo, memberRepo, recordRepo);
         }
