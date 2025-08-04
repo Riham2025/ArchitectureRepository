@@ -11,7 +11,7 @@ namespace librarymanagementArchitectureRepository.Services
     {
         private readonly IBookRepository _bookRepo; // Book repository for managing book operations
         private readonly IMemberRepository _memberRepo; // Member repository for managing member operations
-        private readonly IBorrowRecordRepository _recordRepo;
+        private readonly IBorrowRecordRepository _recordRepo; // Borrow record repository for managing borrow records
 
     }
 }
