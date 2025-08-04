@@ -26,11 +26,8 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Add(Book book) // Method to add a new book to the repository
         {
-            if (_books.Any(b => b.Id == book.Id)) // Check if a book with the same ID already exists
-                throw new InvalidOperationException("Book with the same ID already exists."); // Throw an exception if it does
-            book.IsAvailable = true; // Set the book's availability status to true
-            {
-            _books.Add(book);
+           
+            _books.Add(book); // Add the new book to the in-memory list of books
             _context.SaveBooks(_books);
         }
     }
