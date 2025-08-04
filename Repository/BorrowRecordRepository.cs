@@ -34,9 +34,9 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public List<BorrowRecord> GetAll() => _records; // Method to retrieve all borrow records from the repository
 
-        public BorrowRecord GetByBookAndMember(string bookId, string memberId)
+        public BorrowRecord GetByBookAndMember(string bookId, string memberId) // Method to retrieve a borrow record by book ID and member ID
         {
-            return _records.FirstOrDefault(r => r.BookId == bookId && r.MemberId == memberId && r.ReturnDate == null);
+            return _records.FirstOrDefault(r => r.BookId == bookId && r.MemberId == memberId && r.ReturnDate == null); // Find the first borrow record that matches the book ID and member ID, and has not been returned (ReturnDate is null)
         }
     }
 
