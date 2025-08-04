@@ -31,7 +31,7 @@ namespace librarymanagementArchitectureRepository.Repository
             if (index != -1) // Check if the record exists in the list
             {
                 _records[index] = record; // Update the record at the found index with the new record data
-                _context.SaveBorrowRecords(_records);
+                _context.SaveBorrowRecords(_records); // Save the updated list of borrow records to the file context
             }
         }
 
