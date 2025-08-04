@@ -16,7 +16,7 @@ namespace librarymanagementArchitectureRepository.Services
 
         public LibraryService(IBookRepository bookRepo, IMemberRepository memberRepo, IBorrowRecordRepository recordRepo) // Constructor to initialize the library service with repositories
         {
-            _bookRepo = bookRepo;
+            _bookRepo = bookRepo; // Assign the provided book repository to the service
             _memberRepo = memberRepo;
             _recordRepo = recordRepo;
         }
