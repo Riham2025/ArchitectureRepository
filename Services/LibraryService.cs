@@ -66,7 +66,7 @@ namespace librarymanagementArchitectureRepository.Services
             _bookRepo.Update(book); // Update the book in the book repository with the new availability status
             _recordRepo.Add(record); // Add the new borrow record to the borrow record repository
 
-            Console.WriteLine("Book borrowed.");
+            Console.WriteLine("Book borrowed."); // Print confirmation message
         }
 
 
