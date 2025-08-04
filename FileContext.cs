@@ -11,7 +11,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
     {
         public static string BookFile = "books.json"; // File path for storing book data
         public static string MemberFile = "members.json"; // File path for storing member data
-        public static string BorrowFile = "borrows.json";
+        public static string BorrowFile = "borrows.json"; // File path for storing borrow records
 
         public static List<Book> LoadBooks() // Method to load books from the file
         {
