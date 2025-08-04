@@ -18,7 +18,7 @@ namespace librarymanagementArchitectureRepository.Services
         {
             _bookRepo = bookRepo; // Assign the provided book repository to the service
             _memberRepo = memberRepo; // Assign the provided member repository to the service
-            _recordRepo = recordRepo;
+            _recordRepo = recordRepo; // Assign the provided borrow record repository to the service
         }
 
     }
