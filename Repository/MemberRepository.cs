@@ -22,8 +22,8 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Add(Member member) // Method to add a new member to the repository
         {
-            _members.Add(member);
-            FileContext.SaveMembers(_members);
+            _members.Add(member); // Add the member to the in-memory list
+            FileContext.SaveMembers(_members); // Save the updated list of members to the file context
         }
 
 
