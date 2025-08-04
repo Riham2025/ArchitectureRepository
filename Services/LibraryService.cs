@@ -88,7 +88,7 @@ namespace librarymanagementArchitectureRepository.Services
             if (book != null) // Check if the book exists
             {
                 book.IsAvailable = true; // Set the book's availability status to true, indicating it is now available for borrowing
-                _bookRepo.Update(book);
+                _bookRepo.Update(book); // Update the book in the book repository with the new availability status
             }
 
             Console.WriteLine("Book returned.");
