@@ -27,7 +27,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Update(BorrowRecord record) // Method to update an existing borrow record in the repository
         {
-            var index = _records.FindIndex(r => r.Id == record.Id);
+            var index = _records.FindIndex(r => r.Id == record.Id); // Find the index of the record with the same Id as the provided record
             if (index != -1)
             {
                 _records[index] = record;
