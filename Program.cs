@@ -19,7 +19,7 @@ namespace librarymanagementArchitectureRepository
             // Main loop for the library menu
             while (true)
             {
-                Console.WriteLine("\nLibrary Menu:");
+                Console.WriteLine("\nLibrary Menu:"); // Display the library menu
                 Console.WriteLine("1. Add Book");
                 Console.WriteLine("2. Register Member");
                 Console.WriteLine("3. Borrow Book");
@@ -28,7 +28,7 @@ namespace librarymanagementArchitectureRepository
                 Console.Write("Choice: ");
                 var choice = Console.ReadLine();
 
-                switch (choice)
+                switch (choice) 
                 {
                     case "1":
                         Console.Write("Book ID: ");
