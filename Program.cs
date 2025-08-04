@@ -40,7 +40,7 @@ namespace librarymanagementArchitectureRepository
                         service.AddBook(new Book { Id = bookId, Title = title, Author = author });
                         break;
 
-                    case "2":
+                    case "2": // Register a new member
                         Console.Write("Member ID: ");
                         var memberId = Console.ReadLine();
                         Console.Write("Name: ");
