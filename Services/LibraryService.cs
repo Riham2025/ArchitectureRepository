@@ -72,7 +72,8 @@ namespace librarymanagementArchitectureRepository.Services
         public void ReturnBook(string bookId, string memberId) 
         {
             var record = _recordRepo.GetByBookAndMember(bookId, memberId); // Get the borrow record by book ID and member ID
-            if (record == null)
+            if (record == null) // Check if the borrow record exists
+           
             {
                 Console.WriteLine("No borrow record found.");
                 return;
