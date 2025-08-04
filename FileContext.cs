@@ -44,7 +44,14 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static void SaveMembers(List<Member> members) // Method to save members to the JSON file
         {
             string json = JsonSerializer.Serialize(members, options); // Serialize the list of members to JSON format
-            File.WriteAllText(MemberFile, json);
+            File.WriteAllText(MemberFile, json); // Write the JSON content to the file
+        }
+
+        public static List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the JSON file
+        {
+            if (!File.Exists(BorrowFile)) return new List<BorrowRecord>();
+            string json = File.ReadAllText(BorrowFile);
+            return JsonSerializer.Deserialize<List<BorrowRecord>>(json) ?? new List<BorrowRecord>();
         }
     }
 
