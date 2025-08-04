@@ -23,7 +23,7 @@ namespace librarymanagementArchitectureRepository
                 Console.WriteLine("1. Add Book"); // Add a new book to the library
                 Console.WriteLine("2. Register Member"); // Register a new member in the library
                 Console.WriteLine("3. Borrow Book"); // Borrow a book from the library
-                Console.WriteLine("4. Return Book");
+                Console.WriteLine("4. Return Book"); // Return a borrowed book to the library
                 Console.WriteLine("5. Exit");
                 Console.Write("Choice: ");
                 var choice = Console.ReadLine();
