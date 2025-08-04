@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Services
 {
-     public class LibraryService
+    public class LibraryService : ILibraryService
     {
         private readonly IBookRepository _bookRepo; // Book repository for managing book operations
         private readonly IMemberRepository _memberRepo; // Member repository for managing member operations
@@ -70,11 +70,11 @@ namespace librarymanagementArchitectureRepository.Services
         }
 
         public void ReturnBook(string bookId, string memberId)// Method to return a borrowed book to the library
-        
-            {
+
+        {
             var record = _recordRepo.GetByBookAndMember(bookId, memberId); // Get the borrow record by book ID and member ID
             if (record == null) // Check if the borrow record exists
-           
+
             {
                 Console.WriteLine("No borrow record found."); // Print error message if no borrow record is found
                 return;
