@@ -56,7 +56,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
 
         public static void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the JSON file
         {
-            string json = JsonSerializer.Serialize(records, options);
+            string json = JsonSerializer.Serialize(records, options); // Serialize the list of borrow records to JSON format
             File.WriteAllText(BorrowFile, json);
         }
     }
