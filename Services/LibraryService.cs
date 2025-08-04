@@ -91,7 +91,7 @@ namespace librarymanagementArchitectureRepository.Services
                 _bookRepo.Update(book); // Update the book in the book repository with the new availability status
             }
 
-            Console.WriteLine("Book returned.");
+            Console.WriteLine("Book returned."); // Print confirmation message
 
 
         }
