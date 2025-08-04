@@ -81,7 +81,22 @@ namespace librarymanagementArchitectureRepository.Services
             }
 
 
+            record.ReturnDate = DateTime.Now; // Set the return date to the current date and time
+            _recordRepo.Update(record);
+
+            var book = _bookRepo.GetById(bookId);
+            if (book != null)
+            {
+                book.IsAvailable = true;
+                _bookRepo.Update(book);
+            }
+
+            Console.WriteLine("Book returned.");
+
+
         }
+
+
 
     }
 }
