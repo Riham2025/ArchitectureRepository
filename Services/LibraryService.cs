@@ -54,6 +54,14 @@ namespace librarymanagementArchitectureRepository.Services
                 return;
             }
 
+            var record = new BorrowRecord // Create a new borrow record
+            {
+                Id = Guid.NewGuid().ToString(),
+                BookId = bookId,
+                MemberId = memberId,
+                BorrowDate = DateTime.Now
+            };
+
 
         }
     }
