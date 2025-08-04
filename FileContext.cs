@@ -53,6 +53,12 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             string json = File.ReadAllText(BorrowFile); // Read the JSON content from the file
             return JsonSerializer.Deserialize<List<BorrowRecord>>(json) ?? new List<BorrowRecord>(); // Deserialize the JSON content into a list of BorrowRecord objects, return an empty list if deserialization fails
         }
+
+        public static void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the JSON file
+        {
+            string json = JsonSerializer.Serialize(records, options);
+            File.WriteAllText(BorrowFile, json);
+        }
     }
 
 }  
