@@ -11,7 +11,7 @@ namespace librarymanagementArchitectureRepository.Repository
     {
         private List<BorrowRecord> _records; // In-memory list to store borrow records
 
-        public BorrowRecordRepository()
+        public BorrowRecordRepository() // Constructor to initialize the borrow record repository
         {
             _records = FileContext.LoadBorrowRecords();
         }
