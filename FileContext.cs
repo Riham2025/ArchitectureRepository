@@ -31,7 +31,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static void SaveBooks(List<Book> books) // Method to save books to the JSON file
         {
             string json = JsonSerializer.Serialize(books, options); // Serialize the list of books to JSON format
-            File.WriteAllText(BookFile, json);
+            File.WriteAllText(BookFile, json); // Write the JSON content to the file
         }
     }
 
