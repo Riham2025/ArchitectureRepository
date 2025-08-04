@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Repository
 {
-    class BookRepository
+   public  class BookRepository
     {
         private readonly FileContext _context; // File context for managing file operations
 
