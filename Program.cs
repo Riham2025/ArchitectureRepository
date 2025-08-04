@@ -30,7 +30,7 @@ namespace librarymanagementArchitectureRepository
 
                 switch (choice) 
                 {
-                    case "1":
+                    case "1": // Add a new book
                         Console.Write("Book ID: ");
                         var bookId = Console.ReadLine();
                         Console.Write("Title: ");
