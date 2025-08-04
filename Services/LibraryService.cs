@@ -1,4 +1,5 @@
-﻿using librarymanagementArchitectureRepository.Repository;
+﻿using librarymanagementArchitectureRepository.Models;
+using librarymanagementArchitectureRepository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,13 @@ namespace librarymanagementArchitectureRepository.Services
             _bookRepo = bookRepo; // Assign the provided book repository to the service
             _memberRepo = memberRepo; // Assign the provided member repository to the service
             _recordRepo = recordRepo; // Assign the provided borrow record repository to the service
+        }
+
+        public void AddBook(Book book) // Method to add a new book to the library
+        
+        {
+            _bookRepo.Add(book);
+            Console.WriteLine("Book added.");
         }
 
     }
