@@ -75,7 +75,7 @@ namespace librarymanagementArchitectureRepository.Services
             if (record == null) // Check if the borrow record exists
            
             {
-                Console.WriteLine("No borrow record found.");
+                Console.WriteLine("No borrow record found."); // Print error message if no borrow record is found
                 return;
             }
 
