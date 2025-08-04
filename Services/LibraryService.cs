@@ -47,7 +47,8 @@ namespace librarymanagementArchitectureRepository.Services
             }
 
             var member = _memberRepo.GetById(memberId); // Get the member by their unique identifier
-            if (member == null)
+            if (member == null) // Check if the member exists
+            
             {
                 Console.WriteLine("Member not found.");
                 return;
