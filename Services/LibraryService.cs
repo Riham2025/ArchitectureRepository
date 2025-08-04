@@ -23,9 +23,9 @@ namespace librarymanagementArchitectureRepository.Services
         }
 
         public void AddBook(Book book) // Method to add a new book to the library
-        
+
         {
-            _bookRepo.Add(book);
+            _bookRepo.Add(book); // Add the new book to the book repository
             Console.WriteLine("Book added.");
         }
 
