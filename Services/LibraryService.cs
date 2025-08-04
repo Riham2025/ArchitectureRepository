@@ -46,6 +46,13 @@ namespace librarymanagementArchitectureRepository.Services
                 return;
             }
 
+            var member = _memberRepo.GetById(memberId); // Get the member by their unique identifier
+            if (member == null)
+            {
+                Console.WriteLine("Member not found.");
+                return;
+            }
+
 
         }
     }
