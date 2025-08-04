@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository // Namespace for the library management system file context
 {
-    public class FileContext // FileContext class for managing file operations in the library management system
+    public static class FileContext // FileContext class for managing file operations in the library management system
     {
-        public string BookFile = "books.txt"; // File path for storing book data
+        public static string BookFile = "books.json"; // File path for storing book data
+        public static string MemberFile = "members.json";
+        public static string BorrowFile = "borrows.json";
 
-        public string MemberFile = "members.txt"; // File path for storing member data
-
-        public string BorrowFile = "borrows.txt"; // File path for storing borrow records data
-
-        public List<Book> LoadBooks() // Method to load books from the file
+        public static List<Book> LoadBooks() // Method to load books from the file
         {
             var books = new List<Book>(); // Initialize a list to hold books
             if (!File.Exists(BookFile)) return books; // Return empty list if the file does not exist
@@ -35,7 +33,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             return books; // Return the list of books loaded from the file
         }
 
-        public void SaveBooks(List<Book> books) // Method to save books to the file
+        public static void SaveBooks(List<Book> books) // Method to save books to the file
         {
 
             var lines = new List<string>(); // Initialize a list to hold lines for the file
@@ -45,7 +43,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             File.WriteAllLines(BookFile, lines); // Write all lines to the book file
 
         }
-        public List<Member> LoadMembers() // Method to load members from the file
+        public static List<Member> LoadMembers() // Method to load members from the file
         {
             var members = new List<Member>();
 
@@ -60,7 +58,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
 
         }
 
-        public void SaveMembers(List<Member> members) // Method to save members to the file
+        public static void SaveMembers(List<Member> members) // Method to save members to the file
         {
             var lines = new List<string>(); // Initialize a list to hold lines for the file
             foreach (var m in members)
@@ -69,7 +67,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
 
         }
 
-        public List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the file
+        public static List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the file
        
         {
             var records = new List<BorrowRecord>(); // Initialize a list to hold borrow records
@@ -91,7 +89,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             return records;
         }
 
-        public void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the file
+        public static void SaveBorrowRecords(List<BorrowRecord> records) // Method to save borrow records to the file
         {
             var lines = new List<string>(); // Initialize a list to hold lines for the file
             foreach (var r in records)
