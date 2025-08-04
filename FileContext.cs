@@ -38,7 +38,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         {
             if (!File.Exists(MemberFile)) return new List<Member>(); // Check if the file exists, return an empty list if not
             string json = File.ReadAllText(MemberFile); // Read the JSON content from the file
-            return JsonSerializer.Deserialize<List<Member>>(json) ?? new List<Member>();
+            return JsonSerializer.Deserialize<List<Member>>(json) ?? new List<Member>(); // Deserialize the JSON content into a list of Member objects, return an empty list if deserialization fails
         }
     }
 
