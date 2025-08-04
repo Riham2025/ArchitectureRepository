@@ -50,7 +50,7 @@ namespace librarymanagementArchitectureRepository.Services
             if (member == null) // Check if the member exists
             
             {
-                Console.WriteLine("Member not found.");
+                Console.WriteLine("Member not found."); // Print error message if the member is not found
                 return;
             }
 
