@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Repository
 {
-   public  class MemberRepository 
+    public class MemberRepository : IMemberRepository
     {
         private readonly FileContext _context; // File context for managing file operations
 
@@ -28,7 +28,7 @@ namespace librarymanagementArchitectureRepository.Repository
             _members.Add(member); // Add the new member to the in-memory list of members
             _context.SaveMembers(_members); //  Save the updated list of members to the file context
         }
-       
+
 
     }
 }

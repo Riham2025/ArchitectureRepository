@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Repository
 {
-    public class BorrowRecordRepository
-     {
+    public class BorrowRecordRepository : IBorrowRecordRepository
+    {
         private readonly FileContext _context; // File context for managing file operations
 
         private List<BorrowRecord> _records; // List to hold borrow records in memory

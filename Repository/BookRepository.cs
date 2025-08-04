@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace librarymanagementArchitectureRepository.Repository
 {
-   public  class BookRepository
+    public class BookRepository : IBookRepository
     {
         private readonly FileContext _context; // File context for managing file operations
 
@@ -26,14 +26,14 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Add(Book book) // Method to add a new book to the repository
         {
-           
+
             _books.Add(book); // Add the new book to the in-memory list of books
             _context.SaveBooks(_books); // Save the updated list of books to the file context
         }
 
         public void Update(Book book) // Method to update an existing book in the repository
         {
-            var index = _books.FindIndex(b => b.Id == book.Id); 
+            var index = _books.FindIndex(b => b.Id == book.Id);
             if (index != -1) // Check if the book exists in the list
             {
                 _books[index] = book; // Update the book at the found index with the new book data
