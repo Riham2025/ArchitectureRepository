@@ -15,11 +15,18 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static string BorrowFile = "borrows.json"; // File path for storing borrow records
 
 
-        private static JsonSerializerOptions options = new JsonSerializerOptions 
+        private static JsonSerializerOptions options = new JsonSerializerOptions  
         {
             // Configure JSON serialization options
             WriteIndented = true
         };
+
+        public static List<Book> LoadBooks() // Method to load books from the JSON file
+        {
+            if (!File.Exists(BookFile)) return new List<Book>();
+            string json = File.ReadAllText(BookFile);
+            return JsonSerializer.Deserialize<List<Book>>(json) ?? new List<Book>();
+        }
     }
 
 }  
