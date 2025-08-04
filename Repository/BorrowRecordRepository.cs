@@ -19,7 +19,7 @@ namespace librarymanagementArchitectureRepository.Repository
         public void Add(BorrowRecord record) // Method to add a new borrow record to the repository
         {
             _records.Add(record);
-            FileContext.SaveBorrowRecords(_records);
+            FileContext.SaveBorrowRecords(_records); // Save the updated list of borrow records to the file context
         }
 
         public void Update(BorrowRecord record)
