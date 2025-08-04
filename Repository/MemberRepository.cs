@@ -15,7 +15,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public MemberRepository(FileContext context) // Constructor to initialize the repository with a file context
         {
-            _context = context;
+            _context = context; // Assign the provided file context to the repository
             _members = _context.LoadMembers(); 
         }
         
