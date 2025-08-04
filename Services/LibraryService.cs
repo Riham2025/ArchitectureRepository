@@ -26,7 +26,7 @@ namespace librarymanagementArchitectureRepository.Services
 
         {
             _bookRepo.Add(book); // Add the new book to the book repository
-            Console.WriteLine("Book added.");
+            Console.WriteLine("Book added."); // Print confirmation message
         }
 
     }
