@@ -8,13 +8,13 @@ namespace librarymanagementArchitectureRepository
     {
         static void Main(string[] args)
         {
-            var fileContext = new FileContext(); // FileContext instance to manage file operations
-
-            IBookRepository bookRepo = new BookRepository(fileContext); 
-            IMemberRepository memberRepo = new MemberRepository(fileContext); 
-            IBorrowRecordRepository recordRepo = new BorrowRecordRepository(fileContext);
+            IBookRepository bookRepo = new BookRepository(); // Repository for managing books in the library
+            IMemberRepository memberRepo = new MemberRepository();
+            IBorrowRecordRepository recordRepo = new BorrowRecordRepository();
 
             var service = new LibraryService(bookRepo, memberRepo, recordRepo);
+
+            
 
             // Main loop for the library menu
             while (true)
