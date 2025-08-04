@@ -25,5 +25,15 @@ namespace librarymanagementArchitectureRepository.Repository
             _context.SaveBorrowRecords(_records); // Save the updated list of borrow records to the file context
         }
 
+        public void Update(BorrowRecord record) // Method to update an existing borrow record in the repository
+        {
+            var index = _records.FindIndex(r => r.Id == record.Id);
+            if (index != -1)
+            {
+                _records[index] = record;
+                _context.SaveBorrowRecords(_records);
+            }
+        }
+
     }
 }
