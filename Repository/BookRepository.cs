@@ -28,7 +28,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Update(Book book) // Method to update an existing book in the repository
         {
-            var index = _books.FindIndex(b => b.Id == book.Id);
+            var index = _books.FindIndex(b => b.Id == book.Id); // Find the index of the book to be updated
             if (index != -1)
             {
                 _books[index] = book;
