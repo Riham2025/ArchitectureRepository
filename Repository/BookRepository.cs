@@ -9,9 +9,12 @@ namespace librarymanagementArchitectureRepository.Repository
 {
     public class BookRepository : IBookRepository
     {
-        private readonly FileContext _context; // File context for managing file operations
+        private List<Book> _books; // In-memory list to store books
 
-        private List<Book> _books; // List to hold books in memory
+        public BookRepository() 
+        {
+            _books = FileContext.LoadBooks(); // Load books from the file context into the repository's memory
+        }
 
         public BookRepository(FileContext context) // Constructor to initialize the repository with a file context
         {
