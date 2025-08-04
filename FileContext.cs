@@ -33,6 +33,13 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
             string json = JsonSerializer.Serialize(books, options); // Serialize the list of books to JSON format
             File.WriteAllText(BookFile, json); // Write the JSON content to the file
         }
+
+        public static List<Member> LoadMembers() // Method to load members from the JSON file
+        {
+            if (!File.Exists(MemberFile)) return new List<Member>();
+            string json = File.ReadAllText(MemberFile);
+            return JsonSerializer.Deserialize<List<Member>>(json) ?? new List<Member>();
+        }
     }
 
 }  
