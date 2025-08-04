@@ -13,7 +13,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public MemberRepository() // Constructor to initialize the member repository
         {
-            _members = FileContext.LoadMembers();
+            _members = FileContext.LoadMembers(); // Load members from the file context into the repository's memory
         }
 
         public List<Member> GetAll() => _members;
