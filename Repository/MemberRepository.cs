@@ -16,7 +16,7 @@ namespace librarymanagementArchitectureRepository.Repository
             _members = FileContext.LoadMembers(); // Load members from the file context into the repository's memory
         }
 
-        public List<Member> GetAll() => _members;
+        public List<Member> GetAll() => _members; // Method to retrieve all members from the repository
 
         public Member GetById(string id) => _members.FirstOrDefault(m => m.Id == id);
 
