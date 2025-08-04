@@ -19,28 +19,28 @@ namespace librarymanagementArchitectureRepository
             // Main loop for the library menu
             while (true)
             {
-                Console.WriteLine("\nLibrary Menu:"); // Display the library menu
-                Console.WriteLine("1. Add Book"); // Add a new book to the library
-                Console.WriteLine("2. Register Member"); // Register a new member in the library
-                Console.WriteLine("3. Borrow Book"); // Borrow a book from the library
-                Console.WriteLine("4. Return Book"); // Return a borrowed book to the library
+                Console.WriteLine("\nLibrary Menu:");
+                Console.WriteLine("1. Add Book");
+                Console.WriteLine("2. Register Member");
+                Console.WriteLine("3. Borrow Book");
+                Console.WriteLine("4. Return Book");
                 Console.WriteLine("5. Exit");
                 Console.Write("Choice: ");
                 var choice = Console.ReadLine();
 
-                switch (choice) 
+                switch (choice)
                 {
-                    case "1": // Add a new book
+                    case "1":
                         Console.Write("Book ID: ");
-                        string bookId = Console.ReadLine();
+                        string Id = Console.ReadLine();
                         Console.Write("Title: ");
-                        string title = Console.ReadLine();
+                        string Title = Console.ReadLine();
                         Console.Write("Author: ");
-                        string author = Console.ReadLine();
-                        service.AddBook( bookId,  title,  author , true); // Add the new book to the library
+                        string Author = Console.ReadLine();
+                        service.AddBook( Id,  Title,  Author, true);
                         break;
 
-                    case "2": // Register a new member
+                    case "2":
                         Console.Write("Member ID: ");
                         var memberId = Console.ReadLine();
                         Console.Write("Name: ");
@@ -48,7 +48,7 @@ namespace librarymanagementArchitectureRepository
                         service.RegisterMember(new Member { Id = memberId, Name = name });
                         break;
 
-                    case "3": // Borrow a book
+                    case "3":
                         Console.Write("Book ID: ");
                         var bId = Console.ReadLine();
                         Console.Write("Member ID: ");
@@ -56,7 +56,7 @@ namespace librarymanagementArchitectureRepository
                         service.BorrowBook(bId, mId);
                         break;
 
-                    case "4": // Return a borrowed book
+                    case "4":
                         Console.Write("Book ID: ");
                         var rbId = Console.ReadLine();
                         Console.Write("Member ID: ");
@@ -74,5 +74,5 @@ namespace librarymanagementArchitectureRepository
             }
         }
     }
-}
 
+}
