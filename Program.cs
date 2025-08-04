@@ -12,9 +12,9 @@ namespace librarymanagementArchitectureRepository
             IMemberRepository memberRepo = new MemberRepository(); // Repository for managing members in the library
             IBorrowRecordRepository recordRepo = new BorrowRecordRepository(); // Repository for managing borrow records in the library
 
-            var service = new LibraryService(bookRepo, memberRepo, recordRepo);
+            var service = new LibraryService(bookRepo, memberRepo, recordRepo); // Library service that uses the repositories to perform operations on books, members, and borrow records
 
-            
+
 
             // Main loop for the library menu
             while (true)
