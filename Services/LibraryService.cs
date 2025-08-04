@@ -87,7 +87,7 @@ namespace librarymanagementArchitectureRepository.Services
             var book = _bookRepo.GetById(bookId); // Get the book by its unique identifier
             if (book != null) // Check if the book exists
             {
-                book.IsAvailable = true;
+                book.IsAvailable = true; // Set the book's availability status to true, indicating it is now available for borrowing
                 _bookRepo.Update(book);
             }
 
