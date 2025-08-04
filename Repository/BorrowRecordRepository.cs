@@ -39,7 +39,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public BorrowRecord GetByBookAndMember(string bookId, string memberId) // Method to get a borrow record by book ID and member ID
         {
-            return _records.FirstOrDefault(r => r.BookId == bookId && r.MemberId == memberId && r.ReturnDate == null);
+            return _records.FirstOrDefault(r => r.BookId == bookId && r.MemberId == memberId && r.ReturnDate == null); // Check if the record exists in the list
         }
     }
 
