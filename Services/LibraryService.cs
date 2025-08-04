@@ -13,5 +13,13 @@ namespace librarymanagementArchitectureRepository.Services
         private readonly IMemberRepository _memberRepo; // Member repository for managing member operations
         private readonly IBorrowRecordRepository _recordRepo; // Borrow record repository for managing borrow records
 
+
+        public LibraryService(IBookRepository bookRepo, IMemberRepository memberRepo, IBorrowRecordRepository recordRepo) // Constructor to initialize the library service with repositories
+        {
+            _bookRepo = bookRepo;
+            _memberRepo = memberRepo;
+            _recordRepo = recordRepo;
+        }
+
     }
 }
