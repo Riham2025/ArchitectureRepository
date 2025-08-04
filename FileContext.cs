@@ -43,7 +43,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
 
         public static void SaveMembers(List<Member> members) // Method to save members to the JSON file
         {
-            string json = JsonSerializer.Serialize(members, options);
+            string json = JsonSerializer.Serialize(members, options); // Serialize the list of members to JSON format
             File.WriteAllText(MemberFile, json);
         }
     }
