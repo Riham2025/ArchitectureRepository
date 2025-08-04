@@ -21,5 +21,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public List<Member> GetAll() => _members; // Method to get all members from the repository
 
+        public Member GetById(string id) => _members.FirstOrDefault(m => m.Id == id); // Method to get a member by its unique identifier
+
     }
 }
