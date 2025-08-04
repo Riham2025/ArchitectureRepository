@@ -16,7 +16,7 @@ namespace librarymanagementArchitectureRepository.Repository
         public BorrowRecordRepository(FileContext context) // Constructor to initialize the repository with a file context
         {
             _context = context; // Assign the provided file context to the repository
-            _records = _context.LoadBorrowRecords();
+            _records = _context.LoadBorrowRecords(); // Load borrow records from the file context into the repository's memory
         }
     }
 }
