@@ -11,7 +11,7 @@ namespace librarymanagementArchitectureRepository.Repository
     {
         private List<Member> _members; // In-memory list to store members
 
-        public MemberRepository()
+        public MemberRepository() // Constructor to initialize the member repository
         {
             _members = FileContext.LoadMembers();
         }
