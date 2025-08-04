@@ -23,12 +23,20 @@ namespace librarymanagementArchitectureRepository.Services
             _recordRepo = recordRepo; // Assign the provided borrow record repository to the service
         }
 
-        public void AddBook(Book book) // Method to add a new book to the library
-
+        public void AddBook(string Id , string Title , string Author , bool IsAvailable) // Method to add a new book to the library
         {
+            var book = new Book // Create a new book instance
+            {
+                Id = Id, // Unique identifier for the book
+                Title = Title, // Title of the book
+                Author = Author, // Author of the book
+                IsAvailable = IsAvailable // Availability status of the book
+            };
             _bookRepo.Add(book); // Add the new book to the book repository
             Console.WriteLine("Book added."); // Print confirmation message
         }
+
+       
 
         public void RegisterMember(Member member) // Method to register a new member in the library
         {

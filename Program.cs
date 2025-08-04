@@ -12,7 +12,7 @@ namespace librarymanagementArchitectureRepository
             IMemberRepository memberRepo = new MemberRepository(); // Repository for managing members in the library
             IBorrowRecordRepository recordRepo = new BorrowRecordRepository(); // Repository for managing borrow records in the library
 
-            var service = new LibraryService(bookRepo, memberRepo, recordRepo); // Library service that uses the repositories to perform operations on books, members, and borrow records
+            ILibraryService service = new LibraryService(bookRepo, memberRepo, recordRepo); // Library service that uses the repositories to perform operations on books, members, and borrow records
 
 
 
@@ -32,12 +32,12 @@ namespace librarymanagementArchitectureRepository
                 {
                     case "1": // Add a new book
                         Console.Write("Book ID: ");
-                        var bookId = Console.ReadLine();
+                        string bookId = Console.ReadLine();
                         Console.Write("Title: ");
-                        var title = Console.ReadLine();
+                        string title = Console.ReadLine();
                         Console.Write("Author: ");
-                        var author = Console.ReadLine();
-                        service.AddBook(new Book { Id = bookId, Title = title, Author = author });
+                        string author = Console.ReadLine();
+                        service.AddBook( bookId,  title,  author , true); // Add the new book to the library
                         break;
 
                     case "2": // Register a new member
