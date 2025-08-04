@@ -10,6 +10,7 @@ namespace librarymanagementArchitectureRepository.Repository
     class BorrowRecordRepository
     {
         private readonly FileContext _context; // File context for managing file operations
-        private List<BorrowRecord> _records;
+
+        private List<BorrowRecord> _records; // List to hold borrow records in memory
     }
 }
