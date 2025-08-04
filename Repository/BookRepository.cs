@@ -30,5 +30,15 @@ namespace librarymanagementArchitectureRepository.Repository
             _books.Add(book); // Add the new book to the in-memory list of books
             _context.SaveBooks(_books); // Save the updated list of books to the file context
         }
+
+        public void Update(Book book) // Method to update an existing book in the repository
+        {
+            var index = _books.FindIndex(b => b.Id == book.Id);
+            if (index != -1)
+            {
+                _books[index] = book;
+                _context.SaveBooks(_books);
+            }
+        }
     }
 }
