@@ -1,4 +1,5 @@
-﻿using System;
+﻿using librarymanagementArchitectureRepository.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace librarymanagementArchitectureRepository.Services
 {
     class LibraryService
     {
+        private readonly IBookRepository _bookRepo; // Book repository for managing book operations
+        private readonly IMemberRepository _memberRepo;
+        private readonly IBorrowRecordRepository _recordRepo;
 
     }
 }
