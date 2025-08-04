@@ -29,10 +29,10 @@ namespace librarymanagementArchitectureRepository.Repository
         public void Update(Book book) // Method to update an existing book in the repository
         {
             var index = _books.FindIndex(b => b.Id == book.Id); // Find the index of the book to be updated
-            if (index != -1)
+            if (index != -1) // Check if the book exists in the list
             {
-                _books[index] = book;
-                FileContext.SaveBooks(_books);
+                _books[index] = book; // Update the book at the found index
+                FileContext.SaveBooks(_books); // Save the updated list of books to the file context
             }
         }
     }
