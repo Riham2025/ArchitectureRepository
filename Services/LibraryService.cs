@@ -62,7 +62,14 @@ namespace librarymanagementArchitectureRepository.Services
                 BorrowDate = DateTime.Now // Set the current date and time as the borrow date
             };
 
+            book.IsAvailable = false; // Set the book's availability status to false, indicating it is currently borrowed
+            _bookRepo.Update(book);
+            _recordRepo.Add(record);
 
+            Console.WriteLine("Book borrowed.");
         }
+
+
     }
+    
 }
