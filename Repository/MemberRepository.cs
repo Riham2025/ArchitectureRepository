@@ -18,6 +18,8 @@ namespace librarymanagementArchitectureRepository.Repository
             _context = context; // Assign the provided file context to the repository
             _members = _context.LoadMembers(); // Load members from the file context into the repository's memory
         }
-        
+
+        public List<Member> GetAll() => _members; // Method to get all members from the repository
+
     }
 }
