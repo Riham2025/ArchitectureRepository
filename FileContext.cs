@@ -37,7 +37,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static List<Member> LoadMembers() // Method to load members from the JSON file
         {
             if (!File.Exists(MemberFile)) return new List<Member>(); // Check if the file exists, return an empty list if not
-            string json = File.ReadAllText(MemberFile);
+            string json = File.ReadAllText(MemberFile); // Read the JSON content from the file
             return JsonSerializer.Deserialize<List<Member>>(json) ?? new List<Member>();
         }
     }
