@@ -22,8 +22,8 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public void Add(Book book) // Method to add a new book to the repository
         {
-            _books.Add(book);
-            FileContext.SaveBooks(_books);
+            _books.Add(book); // Add the book to the in-memory list
+            FileContext.SaveBooks(_books); // Save the updated list of books to the file context
         }
 
         public void Update(Book book)
