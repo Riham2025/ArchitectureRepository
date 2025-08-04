@@ -41,7 +41,7 @@ namespace librarymanagementArchitectureRepository.Services
             if (book == null || !book.IsAvailable) // Check if the book exists and is available
            
             {
-                Console.WriteLine("Book not available.");
+                Console.WriteLine("Book not available."); // Print error message if the book is not available
                 return;
             }
 
