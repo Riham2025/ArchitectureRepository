@@ -10,7 +10,7 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
     public static class FileContext // FileContext class for managing file operations in the library management system
     {
         public static string BookFile = "books.json"; // File path for storing book data
-        public static string MemberFile = "members.json";
+        public static string MemberFile = "members.json"; // File path for storing member data
         public static string BorrowFile = "borrows.json";
 
         public static List<Book> LoadBooks() // Method to load books from the file
