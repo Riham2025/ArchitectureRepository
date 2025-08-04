@@ -10,6 +10,7 @@ namespace librarymanagementArchitectureRepository.Services
 {
     public class LibraryService : ILibraryService
     {
+        // Repositories for managing books, members, and borrow records in the library
         private readonly IBookRepository _bookRepo; // Book repository for managing book operations
         private readonly IMemberRepository _memberRepo; // Member repository for managing member operations
         private readonly IBorrowRecordRepository _recordRepo; // Borrow record repository for managing borrow records

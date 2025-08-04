@@ -8,6 +8,7 @@ namespace librarymanagementArchitectureRepository.Models // namespace for the Bo
 {
     public class Book // Book model representing a book in the library
     {
+        // Unique identifier and properties for the book
         public string Id { get; set; } // Unique identifier for the book
         public string Title { get; set; } // Title of the book
         public string Author { get; set; } // Author of the book
