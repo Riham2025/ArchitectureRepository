@@ -50,8 +50,8 @@ namespace librarymanagementArchitectureRepository // Namespace for the library m
         public static List<BorrowRecord> LoadBorrowRecords() // Method to load borrow records from the JSON file
         {
             if (!File.Exists(BorrowFile)) return new List<BorrowRecord>(); // Check if the file exists, return an empty list if not
-            string json = File.ReadAllText(BorrowFile);
-            return JsonSerializer.Deserialize<List<BorrowRecord>>(json) ?? new List<BorrowRecord>();
+            string json = File.ReadAllText(BorrowFile); // Read the JSON content from the file
+            return JsonSerializer.Deserialize<List<BorrowRecord>>(json) ?? new List<BorrowRecord>(); // Deserialize the JSON content into a list of BorrowRecord objects, return an empty list if deserialization fails
         }
     }
 
