@@ -20,7 +20,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public Book GetById(string id) => _books.FirstOrDefault(b => b.Id == id); // Method to retrieve a book by its unique identifier
 
-        public void Add(Book book)
+        public void Add(Book book) // Method to add a new book to the repository
         {
             _books.Add(book);
             FileContext.SaveBooks(_books);
