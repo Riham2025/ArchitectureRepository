@@ -38,7 +38,8 @@ namespace librarymanagementArchitectureRepository.Services
         public void BorrowBook(string bookId, string memberId) 
         {
             var book = _bookRepo.GetById(bookId); // Get the book by its unique identifier
-            if (book == null || !book.IsAvailable)
+            if (book == null || !book.IsAvailable) // Check if the book exists and is available
+           
             {
                 Console.WriteLine("Book not available.");
                 return;
