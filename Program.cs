@@ -56,7 +56,7 @@ namespace librarymanagementArchitectureRepository
                         service.BorrowBook(bId, mId);
                         break;
 
-                    case "4":
+                    case "4": // Return a borrowed book
                         Console.Write("Book ID: ");
                         var rbId = Console.ReadLine();
                         Console.Write("Member ID: ");
