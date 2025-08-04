@@ -18,6 +18,8 @@ namespace librarymanagementArchitectureRepository.Repository
             _context = context; // Assign the provided file context to the repository
             _books = _context.LoadBooks(); // Load books from the file context into the repository's memory
         }
-        
+
+        public List<Book> GetAll() => _books; // Method to get all books from the repository
+
     }
 }
