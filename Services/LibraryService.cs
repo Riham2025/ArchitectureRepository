@@ -31,7 +31,7 @@ namespace librarymanagementArchitectureRepository.Services
 
         public void RegisterMember(Member member) // Method to register a new member in the library
         {
-            _memberRepo.Add(member);
+            _memberRepo.Add(member); // Add the new member to the member repository
             Console.WriteLine("Member registered.");
         }
 
