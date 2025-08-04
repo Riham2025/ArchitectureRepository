@@ -8,5 +8,6 @@ namespace librarymanagementArchitectureRepository.Repository
 {
     class MemberRepository
     {
+        private readonly FileContext _context; // File context for managing file operations
     }
 }
