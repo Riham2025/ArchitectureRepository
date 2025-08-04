@@ -10,7 +10,7 @@ namespace librarymanagementArchitectureRepository
         {
             IBookRepository bookRepo = new BookRepository(); // Repository for managing books in the library
             IMemberRepository memberRepo = new MemberRepository(); // Repository for managing members in the library
-            IBorrowRecordRepository recordRepo = new BorrowRecordRepository();
+            IBorrowRecordRepository recordRepo = new BorrowRecordRepository(); // Repository for managing borrow records in the library
 
             var service = new LibraryService(bookRepo, memberRepo, recordRepo);
 
