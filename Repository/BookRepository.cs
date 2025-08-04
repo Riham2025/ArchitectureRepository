@@ -18,7 +18,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public List<Book> GetAll() => _books; // Method to retrieve all books from the repository
 
-        public Book GetById(string id) => _books.FirstOrDefault(b => b.Id == id);
+        public Book GetById(string id) => _books.FirstOrDefault(b => b.Id == id); // Method to retrieve a book by its unique identifier
 
         public void Add(Book book)
         {
