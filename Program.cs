@@ -48,7 +48,7 @@ namespace librarymanagementArchitectureRepository
                         service.RegisterMember(new Member { Id = memberId, Name = name });
                         break;
 
-                    case "3":
+                    case "3": // Borrow a book
                         Console.Write("Book ID: ");
                         var bId = Console.ReadLine();
                         Console.Write("Member ID: ");
