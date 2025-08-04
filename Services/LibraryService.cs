@@ -64,7 +64,7 @@ namespace librarymanagementArchitectureRepository.Services
 
             book.IsAvailable = false; // Set the book's availability status to false, indicating it is currently borrowed
             _bookRepo.Update(book); // Update the book in the book repository with the new availability status
-            _recordRepo.Add(record);
+            _recordRepo.Add(record); // Add the new borrow record to the borrow record repository
 
             Console.WriteLine("Book borrowed.");
         }
