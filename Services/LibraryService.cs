@@ -36,11 +36,11 @@ namespace librarymanagementArchitectureRepository.Services
         }
 
         public void BorrowBook(string bookId, string memberId) // Method to borrow a book from the library
-       
-            {
+
+        {
             var book = _bookRepo.GetById(bookId); // Get the book by its unique identifier
             if (book == null || !book.IsAvailable) // Check if the book exists and is available
-           
+
             {
                 Console.WriteLine("Book not available."); // Print error message if the book is not available
                 return;
@@ -48,7 +48,7 @@ namespace librarymanagementArchitectureRepository.Services
 
             var member = _memberRepo.GetById(memberId); // Get the member by their unique identifier
             if (member == null) // Check if the member exists
-            
+
             {
                 Console.WriteLine("Member not found."); // Print error message if the member is not found
                 return;
@@ -69,7 +69,17 @@ namespace librarymanagementArchitectureRepository.Services
             Console.WriteLine("Book borrowed."); // Print confirmation message
         }
 
+        public void ReturnBook(string bookId, string memberId) 
+        {
+            var record = _recordRepo.GetByBookAndMember(bookId, memberId); // Get the borrow record by book ID and member ID
+            if (record == null)
+            {
+                Console.WriteLine("No borrow record found.");
+                return;
+            }
+
+
+        }
 
     }
-    
 }
