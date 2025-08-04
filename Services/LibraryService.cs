@@ -29,5 +29,11 @@ namespace librarymanagementArchitectureRepository.Services
             Console.WriteLine("Book added."); // Print confirmation message
         }
 
+        public void RegisterMember(Member member) // Method to register a new member in the library
+        {
+            _memberRepo.Add(member);
+            Console.WriteLine("Member registered.");
+        }
+
     }
 }
