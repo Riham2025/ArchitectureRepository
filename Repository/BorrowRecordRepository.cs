@@ -13,7 +13,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public BorrowRecordRepository() // Constructor to initialize the borrow record repository
         {
-            _records = FileContext.LoadBorrowRecords();
+            _records = FileContext.LoadBorrowRecords(); // Load borrow records from the file context into the repository's memory
         }
 
         public void Add(BorrowRecord record)
