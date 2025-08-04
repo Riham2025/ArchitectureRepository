@@ -69,8 +69,9 @@ namespace librarymanagementArchitectureRepository.Services
             Console.WriteLine("Book borrowed."); // Print confirmation message
         }
 
-        public void ReturnBook(string bookId, string memberId) 
-        {
+        public void ReturnBook(string bookId, string memberId)// Method to return a borrowed book to the library
+        
+            {
             var record = _recordRepo.GetByBookAndMember(bookId, memberId); // Get the borrow record by book ID and member ID
             if (record == null) // Check if the borrow record exists
            
