@@ -20,7 +20,7 @@ namespace librarymanagementArchitectureRepository.Repository
 
         public Member GetById(string id) => _members.FirstOrDefault(m => m.Id == id); // Method to retrieve a member by their unique identifier
 
-        public void Add(Member member)
+        public void Add(Member member) // Method to add a new member to the repository
         {
             _members.Add(member);
             FileContext.SaveMembers(_members);
